@@ -5,15 +5,14 @@ local wezterm = require "wezterm"
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
---		|
---		|
+--		| --		|
 --		|
 --		|
 --		V
 
--- Launching defaults
-config.default_prog = { 'pwsh.exe' }
-config.default_cwd =  "c:/Users/Admin/source/repos" 
+-- Launching defaults (comment these out if you're not on windows)
+--config.default_prog = { 'pwsh.exe' }
+--config.default_cwd =  "/opt/nvim" 
 
 
 -- For example, changing the initial geometry for new windows:
@@ -38,11 +37,11 @@ config.window_padding =
 }
 
 -- Background image
-config.window_background_image = "c:/Users/Admin/Pictures/Wallpapers/2bMonika.jpg"
---config.window_background_opacity = 0.8
+config.window_background_image = "/home/legendboun/Pictures/wallpapers/nier.jpg"
+config.window_background_opacity = 0.95
 config.window_background_image_hsb = 
 {
-      brightness = 0.4,
+      brightness = 0.2,
       hue = 1.0,
       saturation = 1.0,
 }
