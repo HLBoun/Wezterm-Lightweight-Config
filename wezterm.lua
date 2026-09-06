@@ -20,7 +20,7 @@ config.initial_cols = 120
 config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font_size = 21 			-- Has to be a weird because of weird padding issues?
+config.font_size = 20 			-- Has to be a weird because of weird padding issues?
 config.color_scheme = 'gruvbox'
 config.font = wezterm.font("Mononoki Nerd Font")
 config.line_height = 1 		-- Extra 0.1 because it helps get rid of a little bit of extra padding at the bottom on 1440p
@@ -37,7 +37,7 @@ config.window_padding =
 }
 
 -- Background image
-config.window_background_image = "/home/legendboun/Pictures/wallpapers/nier.jpg"
+config.window_background_image = "/home/legendboun/Pictures/wallpapers/frierenInBlueFlowers.png"
 config.window_background_opacity = 0.95
 config.window_background_image_hsb = 
 {
@@ -57,6 +57,24 @@ config.keys =
       {
 	    key = 'F7',
 	    action = wezterm.action.CloseCurrentTab { confirm = true },
+      },
+
+      {
+	    key = 'c',
+	    mods = 'CTRL|SHIFT',
+	    action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection',
+      },
+
+      {
+	    key = 'v',
+	    mods = 'CTRL',
+	    action = wezterm.action.PasteFrom 'Clipboard',
+      },
+
+      {
+	   key = 'Backspace',
+	   mods = 'CTRL',
+	   action = wezterm.action.SendKey { key = 'w', mods = 'CTRL'},
       },
 }
 
